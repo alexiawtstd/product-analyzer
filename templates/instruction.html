@@ -12,13 +12,16 @@
                 <div class="instruction-step">
                     <div class="step-icon">1️⃣</div>
                     <h3>Найдите товар на iRecommend.com</h3>
-                    <p>Перейдите на сайт <a href="https://irecommend.ru" target="_blank">iRecommend.ru</a> и найдите интересующий вас товар</p>
+                    <p>Перейдите на сайт <a href="https://irecommend.ru" target="_blank" rel="noopener noreferrer">iRecommend.ru</a> и найдите интересующий вас товар</p>
                 </div>
                 
                 <div class="instruction-step">
                     <div class="step-icon">2️⃣</div>
                     <h3>Скопируйте ссылку</h3>
                     <p>Скопируйте полную ссылку на страницу товара из адресной строки браузера</p>
+                    <div class="url-example">
+                        Пример: <code>https://irecommend.ru/content/nazvanie-tovara</code>
+                    </div>
                 </div>
                 
                 <div class="instruction-step">
@@ -30,7 +33,7 @@
                 <div class="instruction-step">
                     <div class="step-icon">4️⃣</div>
                     <h3>Получите результат</h3>
-                    <p>Наш сервис проанализирует первые 20 отзывов и покажет детальную статистику</p>
+                    <p>Наш сервис проанализирует отзывы и покажет детальную статистику</p>
                 </div>
             </div>
             
@@ -44,15 +47,21 @@
                             placeholder="https://irecommend.ru/content/..." 
                             required
                             class="url-input"
+                            pattern="https://irecommend\\.(ru|com)/.*"
+                            title="Введите ссылку с сайта irecommend.ru или irecommend.com"
                         >
+                        <small>Только ссылки с irecommend.ru или irecommend.com</small>
                     </div>
                     <button type="submit" class="btn btn-primary btn-large btn-block">
                         Анализировать отзывы
                     </button>
                 </form>
+                
+                <div class="privacy-note">
+                    <p>Мы анализируем только открытые отзывы и не сохраняем их содержимое</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
 {% endblock %}
-
