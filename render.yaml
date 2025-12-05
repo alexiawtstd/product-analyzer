@@ -7,8 +7,8 @@ services:
       python --version
       pip install --upgrade pip
       pip install -r requirements.txt
-      pip install torch==2.5.0+cpu --index-url https://download.pytorch.org/whl/cpu
     startCommand: gunicorn app:app
     envVars:
       - key: SECRET_KEY
         generateValue: true
+
